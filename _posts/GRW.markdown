@@ -5,6 +5,7 @@ date:   2023-07-28 18:07:45 +0200
 categories: jekyll update
 ---
 
+{%- include mathjax.html -%}
 
 This posts presents the GRW theory, which is an attempt at solving the measurement problem and explaining when and how the quantum properties are 'lost' when going from the microscopic to the macroscopic.
 
