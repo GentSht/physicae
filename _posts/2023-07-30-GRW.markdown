@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "The GRW theory"
+date:   2023-07-30 14:30:20 +0200
+---
+This posts presents the GRW theory, which is an attempt at solving the measurement problem and explaining when and how the quantum properties are 'lost' when going from the microscopic to the macroscopic.
+
+
+# The measurement problem
+
+Let's consider an apparatus A that interacts with a miscroscopic system Q and outputs some value. Imagine for instance a pointer in a scale that could take multiple discrete values. 
+
+The states of this apparatus are represented by the eigenstates $\ket{A_{0}},\ket{A_{1}},\dots,\ket{A_{n}}$, which are mutually orthogonal. Each one represents the pointer directed at a specific value.
+
+One of the observables of the system Q, S, possesses an equal amount of eigenvalues and eigenstates $\ket{s_{0}},\ket{s_{1}},\dots,\ket{s_{n}}$.
+
+We also assume that interactions between A and Q are linear because both are made of objects that obey the Schrödinger equation. 
+
+If the initial state of the apparatus is $\ket{A_{0}}$ (some default state) and the initial state of Q is $\ket{s_{j}}$, the combined initial state of the A+Q system would be $\ket{s_{j}}\ket{A_{0}}$ which would evolve to the final state $\ket{s_{j}}\ket{A_{j}}$. This basically means the apparatus points to the $j$-th position on the scale, reflecting the fact that the apparatus gained knowledge on the microscopic system by interacting with it and evolved to a new state.
+
+Until now, everything seems alright. However, let's consider know the possible case where the system Q is in a superposition of two states such as:
+
+$$
+\begin{equation}
+\ket{\psi} = \frac{1}{\sqrt{2}}[\ket{s_{j-k}}+\ket{s_{j}}]
+\end{equation}
+$$
+
+where $k$ is an integer between $0$ and $n$. Using the same evolution scheme as before, the final state of the system would be by linearity:
+
+$$
+\begin{equation}
+\ket{\psi}\ket{A_{0}}\rightarrow \frac{1}{\sqrt{2}}[\ket{s_{j-k}}\ket{A_{j-k}}+\ket{s_{j}}\ket{A_{j}}]
+\end{equation}
+$$
+
+The final state of the apparatus is therefore an entanglement of S and A states which is absolutely not an eigenstate of the apparatus. From this result, it is not really possible to pinpoint where the pointer will point! In our world, the macroscopic one, this type of undecesiveness is really not common. In fact, as far as we know, it does not exist. You can't have a superposition of two macroscopic states for the same object. You can't have a thing present at two (or more) places at the same time. The way to solve that is to postulate that the wavefunction _collapses_. In this case, the finale result is either $\ket{s_{j-k}}\ket{A_{j-k}}$ or $\ket{s_{j}}\ket{A_{j}}$ with both probability of $1/2$. Linearity is broken
+
+We see therefore that in order to accomodate quantum theory with real observations, one needs to insert some sort of _non-linear_ process in an otherwise linear theory. Moreover, we don't have an answer as to when or how this collapse happens. Where does the quantum realm stop? Is there a scale at which superpositions are greatly suppressed, making way to macroscopically compatible phenomena? This is often refered to as the _macroscopic-objectification_ problem.
+
+Theories that attempt at resolving this problem are known as collapse theories. The GRW theory is one of them and asserts that microscopic systems are subjected to random and spontaneous localization processes. In that way, the authors believe measurement processes are the consequence of a unified dynamic that explains both microscopic and macroscopic systems and the hamiltonian in the Schrödinger equation should be modified accordingly to include some sort of non-linearity and stochasticity.
