@@ -3,7 +3,7 @@ layout: post
 title:  "The GRW theory"
 date:   2023-07-30 14:30:20 +0200
 ---
-This posts presents the GRW theory, which is an attempt at solving the measurement problem and explaining when and how the quantum properties are _lost_ when going from the microscopic to the macroscopic.
+This posts presents the GRW theory, which is an attempt at solving the measurement problem and explaining when and how the quantum properties are _lost_ when going from the microscopic to the macroscopic. I summarize the following article: **Ghirardi, G., Rimini, A., & Weber, T. (1986). Unified dynamics for microscopic and macroscopic systems. Physical review, 34(2), 470‑491**
 
 
 # The measurement problem
@@ -39,3 +39,28 @@ The final state of the apparatus is therefore an entanglement of S and A states 
 We see therefore that in order to accomodate quantum theory with real observations, one needs to insert some sort of _non-linear_ process in an otherwise linear theory. Moreover, we don't have an answer as to when or how this collapse happens. Where does the quantum realm stop? Is there a scale at which superpositions are greatly suppressed, making way to macroscopically compatible phenomena? This is often refered to as the _macroscopic-objectification_ problem.
 
 Theories that attempt at resolving this problem are known as collapse theories. The GRW theory is one of them and asserts that microscopic systems are subjected to random and spontaneous localization processes. In that way, the authors believe measurement processes are the consequence of a unified dynamic that explains both microscopic and macroscopic systems and the hamiltonian in the Schrödinger equation should be modified accordingly to include some sort of non-linearity and stochasticity.
+
+
+# Macroscopic object dynamics
+
+As stated above, the main problem with quantum theory is that it allows superposition of states. If a particle is in a superposition of localized far-away spatial states, its trajectory is therefore ill-defined.
+
+In the classical case, one may wonder, considering some phase space density function $\rho$ at $t=0$, what is the probability that a particle of an ensemble of particles, will have its trajectory  contained at all times in a phase space tube:
+
+$$
+E = \{(q,p) \mid |q-q(t)|<\Delta q, |p-p(t)|<\Delta p \}
+$$
+
+Where $q(t),p(t)$ are the position and the momentum respectively of the particle and $\Delta q, \Delta p$ are two arbitrarily chosen values. To compute this probability, one can check randomly with frequency $\lambda$ distributed according to a Poisson distribution whether the particle is in the region or not and discard the other particles that lie outside. The density function of the remaining particles is therefore expected to decrease. This method works in classical mechanics. The difficutly in quantum mechanics is that the Heisenberg principle restrict the measurement of both the particle's position and momentum. Also, because in the quantum world, a system is highly susceptible to a measurement process, it is not possible to just discard the outliers without altering the state of particles inside the tube. It is therefore crucial to define the process that modifies the density matrix $\rho \rightarrow T[\rho]$.
+
+Accordingly, the authors posits the following operator:
+
+$$
+\begin{equation}
+T[\rho] = \sqrt{\frac{\alpha}{\pi}}\int_{-\infty}^{+\infty}dx\, e^{-(\alpha/2)(\hat{q}-x)^{2}}\rho \, e^{-(\alpha/2)(\hat{q}-x)^{2}}
+\end{equation}
+$$
+
+With $\hat{q}$, the position operator. This defines the localization process and happens at random times. The integral is specified on $\mathbf{R}$ and not on another set because no selections (discarding particles outside the region) are made. Here the goal is to study the dynamics of a macroscopic particle, which is subjected to this type of position measurement.
+
+**Ongoing $\dots$**
