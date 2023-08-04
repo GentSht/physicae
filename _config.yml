@@ -21,7 +21,7 @@
 title: Physicae
 #email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  Summary of fundamental physics articles
+  Summary of fundamental physics articles and other things
 baseurl: "/physicae" # the subpath of your site, e.g. /blog
 url: "https://gentsht.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
