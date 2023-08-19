@@ -10,19 +10,19 @@ This posts presents the GRW theory, which is an attempt at solving the measureme
 
 Let's consider an apparatus A that interacts with a miscroscopic system Q and outputs some value. Imagine for instance a pointer in a scale that could take multiple discrete values. 
 
-The states of this apparatus are represented by the eigenstates $\ket{A_{0}},\ket{A_{1}},\dots,\ket{A_{n}}$, which are mutually orthogonal. Each one represents the pointer directed at a specific value.
+The states of this apparatus are represented by the eigenstates $\vert A_{0}\rangle,\vert A_{1}\rangle,\dots,\vert A_{n}\rangle$, which are mutually orthogonal. Each one represents the pointer directed at a specific value.
 
-One of the observables of the system Q, S, possesses an equal amount of eigenvalues and eigenstates $\ket{s_{0}},\ket{s_{1}},\dots,\ket{s_{n}}$.
+One of the observables of the system Q, S, possesses an equal amount of eigenvalues and eigenstates $\vert s_{0}\rangle,\vert s_{1}\rangle,\dots,\vert s_{n}\rangle$.
 
 We also assume that interactions between A and Q are linear because both are made of objects that obey the Schrödinger equation. 
 
-If the initial state of the apparatus is $\ket{A_{0}}$ (some default state) and the initial state of Q is $\ket{s_{j}}$, the combined initial state of the A+Q system would be $\ket{s_{j}}\ket{A_{0}}$ which would evolve to the final state $\ket{s_{j}}\ket{A_{j}}$. This basically means the apparatus points to the $j$-th position on the scale, reflecting the fact that the apparatus gained knowledge on the microscopic system by interacting with it and evolved to a new state.
+If the initial state of the apparatus is $\vert A_{0}\rangle$ (some default state) and the initial state of Q is $\vert s_{j}\rangle$, the combined initial state of the A+Q system would be $\vert s_{j}\rangle\vert A_{0}\rangle$ which would evolve to the final state $\vert s_{j}\rangle\vert A_{j}\rangle$. This basically means the apparatus points to the $j$-th position on the scale, reflecting the fact that the apparatus gained knowledge on the microscopic system by interacting with it and evolved to a new state.
 
 Until now, everything seems alright. However, let's consider know the possible case where the system Q is in a superposition of two states such as:
 
 $$
 \begin{equation}
-\ket{\psi} = \frac{1}{\sqrt{2}}[\ket{s_{k}}+\ket{s_{j}}]
+\vert \psi\rangle = \frac{1}{\sqrt{2}}[\vert s_{k}\rangle+\vert s_{j}\rangle]
 \end{equation}
 $$
 
@@ -30,11 +30,11 @@ where $k\neq j$. Using the same evolution scheme as before, the final state of t
 
 $$
 \begin{equation}
-\ket{\psi}\ket{A_{0}}\rightarrow \frac{1}{\sqrt{2}}[\ket{s_{k}}\ket{A_{j-k}}+\ket{s_{j}}\ket{A_{j}}]
+\vert \psi\rangle\vert A_{0}\rangle\rightarrow \frac{1}{\sqrt{2}}[\vert s_{k}\rangle\vert A_{j-k}\rangle+\vert s_{j}\rangle\vert A_{j}\rangle]
 \end{equation}
 $$
 
-The final state of the apparatus is therefore an entanglement of S and A states which is absolutely not an eigenstate of the apparatus. From this result, it is not really possible to pinpoint where the pointer will point! In our world, the macroscopic one, this type of undecesiveness is really not common. In fact, as far as we know, it does not exist. You can't have a superposition of two macroscopic states for the same object. You can't have a thing present at two (or more) places at the same time. The way to solve that is to postulate that the wavefunction _collapses_. In this case, the finale result is either $\ket{s_{k}}\ket{A_{k}}$ or $\ket{s_{j}}\ket{A_{j}}$ with both a probability of $1/2$. Linearity is broken
+The final state of the apparatus is therefore an entanglement of S and A states which is absolutely not an eigenstate of the apparatus. From this result, it is not really possible to pinpoint where the pointer will point! In our world, the macroscopic one, this type of undecesiveness is really not common. In fact, as far as we know, it does not exist. You can't have a superposition of two macroscopic states for the same object. You can't have a thing present at two (or more) places at the same time. The way to solve that is to postulate that the wavefunction _collapses_. In this case, the finale result is either $\vert s_{k}\rangle\vert A_{k}\rangle$ or $\vert s_{j}\rangle\vert A_{j}\rangle$ with both a probability of $1/2$. Linearity is broken
 
 We see therefore that in order to accomodate quantum theory with real observations, one needs to insert some sort of _non-linear_ process in an otherwise linear theory. Moreover, we don't have an answer as to when or how this collapse happens. Where does the quantum realm stop? Is there a scale at which superpositions are greatly suppressed, making way to macroscopically compatible phenomena? This is often refered to as the _macroscopic-objectification_ problem.
 
@@ -61,6 +61,119 @@ T[\rho] = \sqrt{\frac{\alpha}{\pi}}\int_{-\infty}^{+\infty}dx\, e^{-(\alpha/2)(\
 \end{equation}
 $$
 
-With $\hat{q}$, the position operator. This defines the localization process and happens at random times. The integral is specified on $\mathbf{R}$ and not on another set because no selections (discarding particles outside the region) are made. Here the goal is to study the dynamics of a macroscopic particle, which is subjected to this type of position measurement.
+With $\hat{q}$, the position operator. We can also write this equation to highlight the density matrix components such as:
+
+$$
+\begin{equation}
+\begin{split}
+\langle q^{\prime}\vert T[\rho]\vert q^{\prime\prime}\rangle &= \sqrt{\frac{\alpha}{\pi}}\int_{-\infty}^{+\infty}dx\, e^{-(\alpha/2)(q^{\prime}-x)^{2}}\langle q^{\prime}\vert\rho\vert q^{\prime\prime}\rangle \, e^{-(\alpha/2)(q^{\prime\prime}-x)^{2}} \\
+&= \sqrt{\frac{\alpha}{\pi}}e^{-(\alpha/2)((q^{\prime})^2+(q^{\prime\prime})^2)}\langle q^{\prime}\vert\rho \vert q^{\prime\prime}\rangle \int_{-\infty}^{+\infty}dx\, e^{-\alpha(x^2+x(q^{\prime}+q^{\prime\prime}))} \\
+&= \sqrt{\frac{\alpha}{\pi}}e^{-(\alpha/2)((q^{\prime})^2+(q^{\prime\prime})^2+\frac{(q^{\prime}+q^{\prime\prime})^2}{2})}\langle q^{\prime}\vert\rho \vert q^{\prime\prime}\rangle\int_{-\infty}^{+\infty}dx\, e^{-\alpha(x+\frac{q^{\prime}+q^{\prime\prime}}{2})^2} \\
+&= e^{-(\alpha/4)(q^{\prime}-q^{\prime\prime})^2}\langle q^{\prime}\vert \rho \vert q^{\prime\prime}\rangle
+\end{split}
+\end{equation}
+$$
+
+This defines a localization process that happens at random times. The integral is specified on $\mathbf{R}$ and not on another set because no selections (discarding particles outside the region) are made. Here the goal is to study the dynamics of a macroscopic particle, which is subjected to this type of position measurement.
+
+# Evolution equation
+
+We assume the probability that localization happens in a time $dt$ is $\lambda \, dt$. The evolution of the statistical operator is the combination of two terms: the case where no localization happens with probability $(1-\lambda \, dt)$, which means the system follows the usual evolution dictated by the Schrödinger equation and the other term that gives the dynamic of the measurement process, namely  $\lambda T[\rho] dt$. We have therefore:
+
+$$
+\begin{equation}
+\begin{split}
+\rho(t+dt)=(1-\lambda dt)(\rho(t)-\frac{i}{\hbar}[\hat{H},\rho(t)]dt)+\lambda T[\rho(t)] dt \\
+\Rightarrow \frac{d\rho}{dt} = -\frac{i}{\hbar}[\hat{H},\rho(t)]-\lambda(\rho(t)-T[\rho(t)])
+\end{split}
+\end{equation}
+$$
+
+From this equation, we can determine that $\frac{d}{dt}(Tr[\rho^2])<0$, which means pure states are transformed into statistical mixtures.
+The second term can be written in the coordinate form:
+
+$$
+\begin{equation}
+\begin{split}
+\lambda\langle q^{\prime}\vert(\rho(t)-T[\rho(t)])\vert q^{\prime\prime}\rangle&=\lambda(1-e^{-(\alpha/4)(q^{\prime}-q^{\prime\prime})^2})\langle q^{\prime}\vert \rho\vert q^{\prime\prime}\rangle 
+\end{split}
+\end{equation}
+$$
+
+For a free particle, meaning $\hat{H} = \frac{\hat{p}^{2}}{2m} = \frac{-\hbar^2}{2m}\frac{\partial^2}{\partial q^2}$, we get for the equation above:
+
+$$
+\begin{equation}
+\frac{d}{dt}\langle q^{\prime}\vert\rho\vert q^{\prime\prime}\rangle = \frac{i\hbar}{2m}(\frac{\partial^2}{\partial q^{\prime\,2}}-\frac{\partial^2}{\partial q^{\prime\prime\,2}})\langle q^{\prime}\vert\rho\vert q^{\prime\prime}\rangle-\lambda(1-e^{-(\alpha/4)(q^{\prime}-q^{\prime\prime})^2})\langle q^{\prime}\vert\rho\vert q^{\prime\prime}\rangle
+\end{equation}
+$$
+
+
+The solution of this equation, which can be found in the appendix C of the original article, is in the one dimension case:
+
+$$
+\begin{equation}
+\langle q^{\prime}\vert\rho\vert q^{\prime\prime}\rangle = \frac{1}{2\pi\hbar}\int^{+\infty}_{-\infty}dk\,\int^{+\infty}_{-\infty}dy\,e^{(-i/\hbar)ky}F(k,q^{\prime}-q^{\prime\prime},t)\langle q^{\prime}+y\vert\rho_{Sch}\vert q^{\prime\prime}+y\rangle
+\end{equation}
+$$
+
+With $\langle q^{\prime}\vert\rho_{Sch}\vert q^{\prime\prime}\rangle$, the solution of the same equation for $\lambda=0$ and:
+
+$$
+\begin{equation}
+F(k,q,t)=exp\left\{-\lambda t\left[1-\frac{1}{t}\int^{t}_{0}d\tau\,e^{-(\alpha/4)(q-k\tau/m)^2}\right]\right\}
+\end{equation}
+$$
+
+One can compute the expectation values of the position and momentum operator using the trace of each operator. We get for instance for $\hat{q}$:
+
+$$
+\begin{equation}
+\begin{split}
+\langle \hat{q} \rangle  = Tr[\hat{q}\rho] &= \int_{-\infty}^{\infty}dq\,\langle q\vert\hat{q}\rho\vert q\rangle \\
+& \stackrel{q\rightarrow q-y}{=} \frac{1}{2\pi\hbar}\int^{+\infty}_{-\infty}dk\,\int^{+\infty}_{-\infty}dy\,\int_{-\infty}^{+\infty}dq\, (q-y)e^{(-i/\hbar)ky}F(k,0,t)\langle q\vert\rho_{Sch}\vert q\rangle \\
+&= \frac{1}{2\pi\hbar}\int^{+\infty}_{-\infty}dk\,\int^{+\infty}_{-\infty}dy\,\int_{-\infty}^{+\infty}dq\, q\, e^{(-i/\hbar)ky}F(k,0,t)\langle q\vert\rho_{Sch}\vert q\rangle \\
+& -\frac{1}{2\pi\hbar}\int^{+\infty}_{-\infty}dk\,\int^{+\infty}_{-\infty}dy\,\int_{-\infty}^{\infty}dq\, ye^{(-i/\hbar)ky}F(k,0,t)\langle q\vert\rho_{Sch}\vert q\rangle \\
+& = \frac{1}{2\pi\hbar}\int^{+\infty}_{-\infty}dk\, \int^{+\infty}_{-\infty}dq\, 2\pi\delta(\frac{k}{\hbar})q\,F(k,0,t)\langle q\vert\rho_{Sch}\vert q\rangle \\
+&-\frac{1}{2\pi\hbar}\int^{+\infty}_{-\infty}dq\, \int^{+\infty}_{-\infty}dy\,y\, \left\{\left[\frac{i\hbar}{y}e^{(-i/\hbar)ky}F(k,0,t)\right]^{+\infty}_{-\infty}-\frac{i\hbar}{y}\int^{+\infty}_{-\infty}dk \, e^{(-i/\hbar)ky}\frac{\partial F(k,0,t)}{\partial k}\right\}\langle q\vert\rho_{Sch}\vert q\rangle \\
+&= \frac{2\pi\hbar}{2\pi\hbar}\int^{+\infty}_{-\infty}dq\, F(0,0,t)\langle q\vert\hat{q}\rho_{Sch}\vert q\rangle+\frac{i\hbar}{2\pi\hbar}\int^{+\infty}_{-\infty}dq\,\int^{+\infty}_{-\infty}dk\, 2\pi\delta(\frac{k}{\hbar})\frac{\partial F(k,0,t)}{\partial k}\langle q\vert\rho_{Sch}\vert q \rangle  \\
+& = \int^{+\infty}_{-\infty}dq\, F(0,0,t)\langle q \vert\hat{q}\rho_{Sch}\vert q\rangle+i\hbar\int^{+\infty}_{-\infty}dq\,\frac{\partial F(k,0,t)}{\partial k}\Bigr|_{\substack{k=0}}\langle q\vert\rho_{Sch}\vert q \rangle \\
+& = \langle \hat{q}_{Sch} \rangle F(0,0,t) + i\hbar \,Tr[\rho_{Sch}] \partial_{k}F(0,0,t) = \langle \hat{q}_{Sch} \rangle
+\end{split}
+\end{equation}
+$$
+
+We used the fact that $F(0,0,t)=1$ and $\partial_{k}F(0,0,t) = 0$. Both are easy to verify. The integration by part was performed knowing that $\lim_{k\to\pm\infty}F(k,0,t)=e^{-\lambda t}$ and therefore the first term is exponentially suppressed.
+
+Similarly, one obtains 
+
+$$
+\begin{equation}
+\begin{split}
+\langle \hat{p} \rangle  = Tr[\hat{p}\rho] &= \int_{-\infty}^{\infty}dq\,\langle q\vert\hat{p}\rho\vert q\rangle \\
+& = \frac{-i\hbar}{2\pi\hbar} \int_{-\infty}^{\infty}dq\,\frac{\partial}{\partial q}\langle q\vert\rho\vert q\rangle \\
+& = \frac{-i\hbar}{2\pi\hbar} \int_{-\infty}^{\infty}dq\, \int^{+\infty}_{-\infty}dk\,\int^{+\infty}_{-\infty}dy\, \partial_{q} (e^{(-i/\hbar)ky}F(k,0,t)\langle q\vert\rho_{Sch}\vert q\rangle) \\
+& = \frac{-i\hbar}{2\pi\hbar} \int_{-\infty}^{\infty}dq\, \int^{+\infty}_{-\infty}dk\,\int^{+\infty}_{-\infty}dy\, e^{(-i/\hbar)ky}\left\{(\partial_{q}F(k,0,t))\langle q\vert\rho_{Sch}\vert q\rangle+(\partial_{q}\langle q\vert\rho_{Sch}\vert q\rangle)F(k,0,t)\right\} \\
+& = \frac{1}{2\pi\hbar} \int_{-\infty}^{\infty}dq\, \int^{+\infty}_{-\infty}dk\,\int^{+\infty}_{-\infty}dy\, e^{(-i/\hbar)ky}F(k,0,t)\langle q\vert\hat{p}\rho_{Sch}\vert q\rangle \\
+& = \langle \hat{p}_{Sch} \rangle
+\end{split}
+\end{equation}
+$$
+
+We can aditionnally determine the expectation value of $\hat{q}^2$ and $\hat{p}^2$ and finally calculate the spreads (see original article):
+
+
+$$
+\begin{equation}
+\begin{aligned}
+\Delta q &= \sqrt{\langle (\hat{q}-\langle \hat{q}\rangle)^2 \rangle} = \sqrt{(\Delta q_{Sch})^2+\frac{\alpha\lambda\hbar^2}{6m^2}t^3} \\
+\Delta p &= \sqrt{\langle (\hat{p}-\langle \hat{p}\rangle)^2 \rangle} = \sqrt{(\Delta p_{Sch})^2+\frac{\alpha\lambda\hbar^2}{2}t}
+\end{aligned}
+\end{equation}
+$$
+
+The term $\hbar^2$ in both equations leads to the conclusion that both _modified_ spreads are more or less equal to the ones of the non-modified quantum theory, for all interesting times.
+
+
 
 **Ongoing $\dots$**
