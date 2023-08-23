@@ -170,10 +170,32 @@ $$
 \Delta p &= \sqrt{\langle (\hat{p}-\langle \hat{p}\rangle)^2 \rangle} = \sqrt{(\Delta p_{Sch})^2+\frac{\alpha\lambda\hbar^2}{2}t}
 \end{aligned}
 \end{equation}
-$$
+$$(spread)
 
 The term $\hbar^2$ in both equations leads to the conclusion that both _modified_ spreads are more or less equal to the ones of the non-modified quantum theory, for all interesting times.
 
+Furthermore, it can be shown that this modified dynamic follow the Ehrenfest theorem such that for 
 
+$$
+\begin{equation}
+\begin{aligned}
+\frac{d\langle \hat{q}\rangle}{dt} &= \frac{\hat{p}}{m} \\
+\frac{d\langle \hat{p}\rangle}{dt} &= -\langle \frac{\partial V}{\partial \hat{q}}\rangle
+\end{aligned}
+\end{equation}
+$$
+
+Thus, granted the hamiltonian corresponds to the one of a free macroscopic particle, the expectation values are not affected by the non-hamiltonian terms.
+
+In eq. (12), the additive terms provide a time interval $T$ for which these terms remain sufficiently small in order to leave only a Schrödinger evolution. $T$ should be of the order of:
+
+$$
+\begin{equation}
+\begin{aligned}
+T_{1} &= \left(\frac{6m^{2}(\Delta q_{Sch})^2}{\alpha\lambda\hbar^2}\right)^{1/3}\\
+T_{2} &= \frac{2(\Delta p_{Sch})^2}{\alpha\lambda\hbar^2}
+\end{aligned}
+\end{equation}
+$$
 
 **Ongoing $\dots$**
