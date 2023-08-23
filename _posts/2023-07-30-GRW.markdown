@@ -170,7 +170,7 @@ $$
 \Delta p &= \sqrt{\langle (\hat{p}-\langle \hat{p}\rangle)^2 \rangle} = \sqrt{(\Delta p_{Sch})^2+\frac{\alpha\lambda\hbar^2}{2}t}
 \end{aligned}
 \end{equation}
-$$(spread)
+$$
 
 The term $\hbar^2$ in both equations leads to the conclusion that both _modified_ spreads are more or less equal to the ones of the non-modified quantum theory, for all interesting times.
 
