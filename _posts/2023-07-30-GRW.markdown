@@ -74,11 +74,11 @@ $$
 \end{equation}
 $$
 
-This defines a localization process that happens at random times. The integral is specified on $\mathbf{R}$ and not on another set because no selections (discarding particles outside the region) are made. Here the goal is to study the dynamics of a macroscopic particle, which is subjected to this type of position measurement.
+This defines a localization process that happens at random times. The integral is specified on $\mathbf{R}$ and not on another set because no selections (discarding particles outside the region) are made. We will need to study the dynamics of a macroscopic particle, which is subjected to this type of position measurement. The aim is to understand how such dynamics can lead to the suppression of the linear superposition of _macro-states_  without affecting the microscopic behaviour described by standard quantum mechanics.
 
-# Evolution equation
+## Evolution equation
 
-We assume the probability that localization happens in a time $dt$ is $\lambda \, dt$. The evolution of the statistical operator is the combination of two terms: the case where no localization happens with probability $(1-\lambda \, dt)$, which means the system follows the usual evolution dictated by the Schrödinger equation and the other term that gives the dynamic of the measurement process, namely  $\lambda T[\rho] dt$. We have therefore:
+First, let's say we study a macroscopic particle in one dimension and we assume the probability that the localization happens in a time $dt$ is $\lambda \, dt$. The evolution of the statistical operator is the combination of two terms: the case where no localization happens with probability $(1-\lambda \, dt)$, which means the system follows the usual evolution dictated by the Schrödinger equation and the other term that gives the dynamic of the measurement process, namely  $\lambda T[\rho] dt$. We have therefore:
 
 $$
 \begin{equation}
@@ -121,7 +121,7 @@ With $\langle q^{\prime}\vert\rho_{Sch}\vert q^{\prime\prime}\rangle$, the solut
 
 $$
 \begin{equation}
-F(k,q,t)=exp\left\{-\lambda t\left[1-\frac{1}{t}\int^{t}_{0}d\tau\,e^{-(\alpha/4)(q-k\tau/m)^2}\right]\right\}
+F(k,q,t)=\exp\left\{-\lambda t\left[1-\frac{1}{t}\int^{t}_{0}d\tau\,e^{-(\alpha/4)(q-k\tau/m)^2}\right]\right\}
 \end{equation}
 $$
 
@@ -172,7 +172,7 @@ $$
 \end{equation}
 $$
 
-The term $\hbar^2$ in both equations leads to the conclusion that both _modified_ spreads are more or less equal to the ones of the non-modified quantum theory, for all interesting times.
+The presence of the terms $\hbar^2$ in both numerators and of the macroscopic mass term in the first denominator lead to the conclusion that both _modified_ spreads are more or less equal to the ones of the non-modified quantum theory, for all interesting times.
 
 Furthermore, it can be shown that this modified dynamic follow the Ehrenfest theorem such that for 
 
@@ -197,5 +197,77 @@ T_{2} &= \frac{2(\Delta p_{Sch})^2}{\alpha\lambda\hbar^2}
 \end{aligned}
 \end{equation}
 $$
+
+An interesting and important remark emerges when looking at how the diagonal and non-diagonal terms of $\langle q^{\prime}\vert \rho\vert q^{\prime\prime}\rangle$ are suppressed or not.
+Indeed, when $\vert q^{\prime}-q^{\prime\prime}\vert < \frac{1}{\sqrt{\alpha}}$, meaning the states are closer than the characteristic localization distance, then $F(k,0,t)$ is nearly equal to $1$ and thus $\langle q^{\prime}\vert \rho\vert q^{\prime\prime}\rangle = \langle q^{\prime}\vert \rho_{Sch}\vert q^{\prime\prime}\rangle$. However, when the states are located far away from each other i.e $\vert q^{\prime}-q^{\prime\prime}\vert > \frac{1}{\sqrt{\alpha}}$, $F(k,q\neq 0,t)$ is suppressed by a factor $e^{-\lambda t}$, translating the fact that the non-Hamiltonian term governs the dynamic.
+
+In conclusion, we showed that _far-away_ macro-states in linear superposition will collapse into one of their terms and quantum behaviour is suppressed for distances larger than a characteristic length while being conserved for distances less than the same characteristic length.
+
+
+# Generalization to a N particle system
+
+We want here to study how the dynamic of a composite system of N particle is affected, with again the goal in mind to allow a standard quantum description at the microscopic level and a classical description at the macroscopic level. In other words, if the modification of the microscopic dynamic of the constituents leads correctly to the suppression of macroscopic superpositions, then the job is done.
+
+We modify first the evolution equation and the measurement operator in order to describe N particles:
+
+$$
+\begin{equation}
+\begin{aligned}
+\frac{d\rho}{dt} &= -\frac{i}{\hbar}[\hat{H},\rho(t)]-\sum_{i=1}^{N}\lambda_{i}(\rho(t)-T_{i}[\rho(t)])\\
+T_{i}[\rho] &= \sqrt{\frac{\alpha}{\pi}}\int_{-\infty}^{+\infty}dx\, e^{-(\alpha/2)(\hat{q_{i}}-x)^{2}}\rho \, e^{-(\alpha/2)(\hat{q_{i}}-x)^{2}}
+\end{aligned}
+\end{equation}
+$$
+
+Where each $i$-th particle has a specific mean localization rate of $\lambda_{i}$. We need to modify the position operator $\hat{q}_{i}$ of each particle to express it in terms of the center of mass operator $\hat{Q}$ and the relative position operators $\hat{r}$ such that:
+
+$$
+\begin{equation}
+\hat{q}_{i} = \hat{Q}+\sum_{j=1}^{N-1}c_{ij}\hat{r}_{j}
+\end{equation}
+$$
+
+We can re-write the evolution equation of eq.(15) by splitting the hamiltonian like $H = H_{Q}+H_{r}$ and take the trace over the internal degrees of motion to find:
+
+$$
+\begin{equation}
+\frac{d\rho_{Q}}{dt} = -\frac{i}{\hbar}[\hat{H}_{Q},\rho_{Q}(t)]-\sum_{i=1}^{N}\lambda_{i}(\rho_{Q}(t)-T[\rho_{Q}(t)])
+\end{equation}
+$$
+
+Where $\rho_{Q}(t) = Tr^{(r)}[\rho(t)]$ and using the fact that $Tr^{(r)}[T_{i}[\rho]] = T_{Q}[Tr^{(r)}[\rho]]$, with $T_{Q}[\rho]$ being the same expression as eq. (3), replacing $\hat{q}_{i}$ by $\hat{Q}$. Refering to the equation above, we can see the center of mass follows the same evolution equation as the one for a free macroscopic particle.
+
+Furthermore, we can show that the internal and COM motions decouple when the localization process happens, which means that the quantum nature of the microscopic constituents is maintained but the overall structure is subjected to a localization, leaving no room for macro-superpositions. Indeed, one can compute the non-diagonal element of $T_{i}[\rho]$ in the internal-COM coordinates basis:
+
+$$
+\begin{equation}
+\begin{split}
+\langle Q^{\prime}r^{\prime}\vert T_{i}[\rho]\vert Q^{\prime\prime}r^{\prime\prime}\rangle &= \exp\left\{-\frac{\alpha}{4}(Q^{\prime}-Q^{\prime\prime}+\sum_{j}c_{ij}r_{j})^{2}\right\}\langle Q^{\prime}r^{\prime}\vert \rho\vert Q^{\prime\prime}r^{\prime\prime}\rangle \\
+& \approx \exp\left\{-\frac{\alpha}{4}(Q^{\prime}-Q^{\prime\prime})^{2}\right\}\langle Q^{\prime}r^{\prime}\vert \rho\vert Q^{\prime\prime}r^{\prime\prime}\rangle \\
+& = \langle Q^{\prime}r^{\prime}\vert\sqrt{\frac{\alpha}{\pi}}\int_{-\infty}^{\infty}dx\, e^{-(\alpha/2)(\hat{Q}-x)^{2}}\rho \, e^{-(\alpha/2)(\hat{Q}-x)^{2}}\vert Q^{\prime\prime}r^{\prime\prime}\rangle \\
+& = \langle Q^{\prime}r^{\prime}\vert T_{Q}[\rho]\vert Q^{\prime\prime}r^{\prime\prime}\rangle
+\end{split}
+\end{equation}
+$$
+
+We used in the second line the approximation that the relative motion of the atoms compared to their equilibrium position (with respect to the COM) is smaller than the localization distance, keeping it then in the Schrödinger _regime_:
+
+$$
+\begin{equation}
+\begin{aligned}
+\vert \sum_{j=1}^{N-1}c_{ij}r_{j}^{\prime}-a_{i}\vert &\ll \frac{1}{\sqrt{\alpha}} \\
+\vert \sum_{j=1}^{N-1}c_{ij}r_{j}^{\prime\prime}-a_{i}\vert &\ll \frac{1}{\sqrt{\alpha}}
+\end{aligned}
+\end{equation}
+$$
+
+$ T_{i}[\rho] = T_{Q}[\rho]$ proves then the localization of one constituent leads directly to the localization of the whole object. Finally, if each constituent has the same rate $\lambda_{micro}$ then the rate of the COM is simply $\lambda_{macro} = N\lambda_{micro}$. 
+
+## Parameters of the theory
+
+To complete what was just elaborated, one must find for the parameters some coherent values to make correspond the theory with the common observations, namely that the localization must happen in mere seconds and the characteristic length splitting quantum and classical behaviours should be larger than inter-atomic spacing and the mean spread of the equilibrium position of each atom.
+The mean rate $\lambda$ and the localization length $l_{C}=\alpha^{-1/2}$ are the central parameters of this theory and therefore the authors have chosen that $\lambda_{micro} \approx 10^{-16}\, \text{sec}^{-1}$ and $l_{C}\approx 10^{-5}\, \text{cm}$. 
+
+We can see that the localization time ($\lambda_{micro}^{-1}$) for microscopic constituents is very large and that the distance between them is much smaller than $l_{C}$, which guarantees their dynamic follow the Schrödinger equation. Taking $N\approx 10^{23}$, we get then $\lambda_{macro} = 10^{7}\, \text{sec}^{-1}$, corresponding to times in the micro-second range.
 
 **Ongoing $\dots$**
