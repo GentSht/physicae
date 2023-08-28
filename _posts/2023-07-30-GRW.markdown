@@ -41,7 +41,7 @@ We see therefore that in order to accomodate quantum theory with real observatio
 Theories that attempt at resolving this problem are known as collapse theories. The GRW theory is one of them and asserts that microscopic systems are subjected to random and spontaneous localization processes. In that way, the authors believe measurement processes are the consequence of a unified dynamic that explains both microscopic and macroscopic systems and the hamiltonian in the Schrödinger equation should be modified accordingly to include some sort of non-linearity and stochasticity.
 
 
-# Macroscopic object dynamics
+# Quantum and classical dynamics
 
 As stated above, the main problem with quantum theory is that it allows superposition of states. If a particle is in a superposition of localized far-away spatial states, its trajectory is therefore ill-defined.
 
@@ -76,7 +76,7 @@ $$
 
 This defines a localization process that happens at random times. The integral is specified on $\mathbf{R}$ and not on another set because no selections (discarding particles outside the region) are made. We will need to study the dynamics of a macroscopic particle, which is subjected to this type of position measurement. The aim is to understand how such dynamics can lead to the suppression of the linear superposition of _macro-states_  without affecting the microscopic behaviour described by standard quantum mechanics.
 
-## Evolution equation
+# Evolution equation
 
 First, let's say we study a macroscopic particle in one dimension and we assume the probability that the localization happens in a time $dt$ is $\lambda \, dt$. The evolution of the statistical operator is the combination of two terms: the case where no localization happens with probability $(1-\lambda \, dt)$, which means the system follows the usual evolution dictated by the Schrödinger equation and the other term that gives the dynamic of the measurement process, namely  $\lambda T[\rho] dt$. We have therefore:
 
@@ -263,7 +263,7 @@ $$
 
 $ T_{i}[\rho] = T_{Q}[\rho]$ proves then the localization of one constituent leads directly to the localization of the whole object. Finally, if each constituent has the same rate $\lambda_{micro}$ then the rate of the COM is simply $\lambda_{macro} = N\lambda_{micro}$. 
 
-## Parameters of the theory
+# Parameters of the theory
 
 To complete what was just elaborated, one must find for the parameters some coherent values to make correspond the theory with the common observations, namely that the localization must happen in mere seconds and the characteristic length splitting quantum and classical behaviours should be larger than inter-atomic spacing and the mean spread of the equilibrium position of each atom.
 The mean rate $\lambda$ and the localization length $l_{C}=\alpha^{-1/2}$ are the central parameters of this theory and therefore the authors have chosen that $\lambda_{micro} \approx 10^{-16}\, \text{sec}^{-1}$ and $l_{C}\approx 10^{-5}\, \text{cm}$. 
