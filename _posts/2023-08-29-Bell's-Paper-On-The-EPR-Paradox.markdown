@@ -66,27 +66,6 @@ $$
 We want to show that equations (3) and (5) cannot be strictly equal nor can they be made as close as possible.
 
 We look at the average of the expectation values in order to avoid angles for which this approach might be inconclusive. We suppose first the difference between $\bar{P}(\vec{a},\vec{b})$ and $-\overline{\vec{a}\cdot\vec{b}}$ is very small, , for all $\vec{a}$ and $\vec{b}$:
-<!---
-We can also take the difference between the expectation values of $B$ measurement in different bases:
-
-$$
-\begin{equation}
-\begin{split}
-P(\vec{a},\vec{b})-P(\vec{a},\vec{c}) &= -\int d\lambda\, \rho(\lambda)\left[A(\vec{a},\lambda)A(\vec{b},\lambda)-A(\vec{a},\lambda)A(\vec{c},\lambda)\right]\\
-&= -\int d\lambda\, \rho(\lambda)A(\vec{a},\lambda)A(\vec{b},\lambda)\left[A(\vec{b},\lambda)A(\vec{c},\lambda)-1\right]
-\end{split}
-\end{equation}
-$$
-
-The second line was found using $A(\vec{b},\lambda)A(\vec{b},\lambda) = +1$. Taking the absolute value and keeping in mind that $\vert A(\vec{a},\lambda)A(\vec{b},\lambda)\vert \le 1$, we get:
-
-$$
-\begin{equation}
-\vert P(\vec{a},\vec{b})-P(\vec{a},\vec{c})\vert \le \int d\lambda\, \rho(\lambda)\left[1-A(\vec{b},\lambda)A(\vec{c},\lambda)\right] = 1-P(\vec{b},\vec{c})
-\end{equation}
-$$
---->
-
 
 $$
 \begin{equation}
